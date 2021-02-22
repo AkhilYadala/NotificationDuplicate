@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  NotificationDuplicate
+//  LocalNotificationDemo
 //
-//  Created by akhil.y on 23/02/21.
+//  Created by prashuk.j on 22/02/21.
 //
 
 #import "AppDelegate.h"
@@ -13,9 +13,17 @@
 
 @implementation AppDelegate
 
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    UNNotificationPresentationOptions presentationOptions = UNNotificationPresentationOptionSound + UNNotificationPresentationOptionAlert;
+    
+    completionHandler(presentationOptions);
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    center.delegate = self;
     return YES;
 }
 
