@@ -12,6 +12,6 @@
 #import "AdvancedSwipeViewDelegate.h"
 
 @interface NotificationViewController : UIViewController<UNNotificationContentExtension,AdvancedSwipeViewDelegate>
-
+@property (strong, nonatomic) NSTimer *timer;
 @end
 

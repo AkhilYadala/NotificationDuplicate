@@ -36,13 +36,13 @@ bool isGrantedNotificationAccess;
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         
         UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
-        content.title = @"Notification Title";
-        content.subtitle = @"Notification SubTitle";
-        content.body = @"This is the notification's body";
+        content.title = @"$ PayEase";
+        content.subtitle = @"Drag for Details";
+        content.body = @"Swipe Right to Accept or Left to Deny";
         content.categoryIdentifier = @"myNotification";
     
         
-        UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats:NO];
+        UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:3 repeats:NO];
         
         UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"UYLocalNotification" content:content trigger:trigger];
         

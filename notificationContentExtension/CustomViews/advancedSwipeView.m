@@ -2,7 +2,7 @@
 //  advancedSwipeView.m
 //  notificationContentExtension
 //
-//  Created by prashuk.j on 22/02/21.
+
 //
 
 #import "advancedSwipeView.h"
@@ -105,69 +105,7 @@
     [roundedRect stroke];
 }
 
-//- (void)updateCenter:(CGPoint)centerPoint {
-//    self.circle = [UIBezierPath bezierPathWithArcCenter:centerPoint radius:250.0/2.0 startAngle:0 endAngle:(22*3.14)/7 clockwise:YES];
-//    [self setNeedsDisplay];
-//}
 
-#pragma mark - Gesture Recognizers
-/*
-- (void)pan:(UIPanGestureRecognizer *)gesture {
-    if(isAttachmentAllowed) {
-        CGFloat circleDiameter = 250.0 - SWIPE_VIEW_DIFFERENCE_BETWEEN_RECT_AND_CIRCLE;
-        CGPoint gesturePoint = [gesture locationInView:self];
-        gesturePoint.y = 250.0/2.0;
 
-        if((gesture.state == UIGestureRecognizerStateBegan) || gesture.state == UIGestureRecognizerStateChanged || gesture.state == UIGestureRecognizerStateEnded) {
-
-            if(gesture.state == UIGestureRecognizerStateBegan) {
-                self.attachmentBehaviour = [[UIAttachmentBehavior alloc] initWithItem:self.circle attachedToAnchor:self.circle.center];
-                [self.animator addBehavior:self.attachmentBehaviour];
-
-            } else if(gesture.state == UIGestureRecognizerStateChanged) {
-                //CGPoint velocity = [gesture velocityInView:self];
-                if(gesturePoint.x <= self.bounds.size.width - circleDiameter/2.0 && gesturePoint.x >= circleDiameter/2.0) {
-                    self.attachmentBehaviour.anchorPoint = gesturePoint;
-                }
-            } else if(gesture.state == UIGestureRecognizerStateEnded) {
-                if(gesturePoint.x >= self.bounds.size.width - circleDiameter/2.0 - SWIPE_VIEW_DIFFERENCE_FOR_ACCEPTANCE_OR_DENIAL) {
-                    NSLog(@"Payment Accepted");
-    //                if(self.delegate) {
-    //                    [self.delegate didFinishSwipingWithStatus:YES];
-    //                }
-                    //Payment Accepted
-                    [self.animator removeBehavior:self.attachmentBehaviour];
-                    self.attachmentBehaviour = nil;
-                //notify the view controller to complete the transaction
-                } else if(gesturePoint.x <= circleDiameter/2.0 + SWIPE_VIEW_DIFFERENCE_FOR_ACCEPTANCE_OR_DENIAL) {
-                    NSLog(@"Payment Rejected");
-    //                if(self.delegate) {
-    //                    [self.delegate didFinishSwipingWithStatus:NO];
-    //                }
-                    [self.animator removeBehavior:self.attachmentBehaviour];
-                    self.attachmentBehaviour = nil;
-                    // Payment Rejected
-                } else {
-                    // we will animate the circle back to the center
-                    //NSLog(@"%f %f", self.attachmentBehaviour.anchorPoint.x, self.attachmentBehaviour.anchorPoint.y);
-                    [UIView animateWithDuration:1.0 animations:^() {
-    //                        self.attachmentBehaviour.anchorPoint = CGPointMake(self.bounds.size.width/2.0, 250.0/2.0);
-                        self.circle.center = CGPointMake(self.bounds.size.width/2.0, 250.0/2.0);
-                        [self.animator removeBehavior:self.attachmentBehaviour];
-                        self.attachmentBehaviour = nil;
-                        isAttachmentAllowed = false;
-                        } completion:^(BOOL finished) {
-                            isAttachmentAllowed = true;
-                        if(finished) {
-                            //[dropsToRemove makeObjectsPerformSelector:@selector(removeFromSuperview)];
-                        }
-                    }];
-                
-                }
-            }
-        }
-    }
-}
-*/
 
 @end

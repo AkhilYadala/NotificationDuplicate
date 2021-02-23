@@ -22,6 +22,7 @@
 		D153B97525E452820035625F /* CircularUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = D153B97425E452820035625F /* CircularUIView.m */; };
 		D153B97925E452C60035625F /* advancedSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D153B97825E452C60035625F /* advancedSwipeView.m */; };
 		D153B98825E4C7B10035625F /* BigView.m in Sources */ = {isa = PBXBuildFile; fileRef = D153B98725E4C7B10035625F /* BigView.m */; };
+		D153B98D25E5120D0035625F /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D153B98C25E5120D0035625F /* SuccessViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		D153B97E25E4530A0035625F /* AdvancedSwipeViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedSwipeViewDelegate.h; sourceTree = "<group>"; };
 		D153B98625E4C7B10035625F /* BigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigView.h; sourceTree = "<group>"; };
 		D153B98725E4C7B10035625F /* BigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigView.m; sourceTree = "<group>"; };
+		D153B98B25E5120D0035625F /* SuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuccessViewController.h; sourceTree = "<group>"; };
+		D153B98C25E5120D0035625F /* SuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuccessViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,8 @@
 				D153B97225E452820035625F /* CustomViews */,
 				D153B98625E4C7B10035625F /* BigView.h */,
 				D153B98725E4C7B10035625F /* BigView.m */,
+				D153B98B25E5120D0035625F /* SuccessViewController.h */,
+				D153B98C25E5120D0035625F /* SuccessViewController.m */,
 			);
 			path = notificationContentExtension;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				D153B91325E431A20035625F /* NotificationViewController.m in Sources */,
 				D153B98825E4C7B10035625F /* BigView.m in Sources */,
 				D153B97525E452820035625F /* CircularUIView.m in Sources */,
+				D153B98D25E5120D0035625F /* SuccessViewController.m in Sources */,
 				D153B97925E452C60035625F /* advancedSwipeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
