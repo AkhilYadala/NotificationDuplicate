@@ -8,8 +8,10 @@
 #import <UIKit/UIKit.h>
 #import <UserNotifications/UserNotifications.h>
 #import <UserNotificationsUI/UserNotificationsUI.h>
+#import <LocalAuthentication/LocalAuthentication.h>
+#import "AdvancedSwipeViewDelegate.h"
 
-@interface NotificationViewController : UIViewController<UNNotificationContentExtension>
+@interface NotificationViewController : UIViewController<UNNotificationContentExtension,AdvancedSwipeViewDelegate>
 
 @end
 

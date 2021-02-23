@@ -21,6 +21,7 @@
 		D153B91A25E431A20035625F /* notificationContentExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D153B90A25E431A20035625F /* notificationContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D153B97525E452820035625F /* CircularUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = D153B97425E452820035625F /* CircularUIView.m */; };
 		D153B97925E452C60035625F /* advancedSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D153B97825E452C60035625F /* advancedSwipeView.m */; };
+		D153B98825E4C7B10035625F /* BigView.m in Sources */ = {isa = PBXBuildFile; fileRef = D153B98725E4C7B10035625F /* BigView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		D153B97825E452C60035625F /* advancedSwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = advancedSwipeView.m; sourceTree = "<group>"; };
 		D153B97C25E452DB0035625F /* advancedSwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = advancedSwipeView.h; sourceTree = "<group>"; };
 		D153B97E25E4530A0035625F /* AdvancedSwipeViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedSwipeViewDelegate.h; sourceTree = "<group>"; };
+		D153B98625E4C7B10035625F /* BigView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BigView.h; sourceTree = "<group>"; };
+		D153B98725E4C7B10035625F /* BigView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				D153B91425E431A20035625F /* MainInterface.storyboard */,
 				D153B91725E431A20035625F /* Info.plist */,
 				D153B97225E452820035625F /* CustomViews */,
+				D153B98625E4C7B10035625F /* BigView.h */,
+				D153B98725E4C7B10035625F /* BigView.m */,
 			);
 			path = notificationContentExtension;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D153B91325E431A20035625F /* NotificationViewController.m in Sources */,
+				D153B98825E4C7B10035625F /* BigView.m in Sources */,
 				D153B97525E452820035625F /* CircularUIView.m in Sources */,
 				D153B97925E452C60035625F /* advancedSwipeView.m in Sources */,
 			);

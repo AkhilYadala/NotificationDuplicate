@@ -13,16 +13,19 @@
 #define SWIPE_VIEW_ROUNDED_RECT_CORNER_RADIUS 12.0
 #define SWIPE_VIEW_DIFFERENCE_BETWEEN_RECT_AND_CIRCLE 8.0
 #define SWIPE_VIEW_DIFFERENCE_FOR_ACCEPTANCE_OR_DENIAL 10.0
+ 
 
-Boolean isAttachmentAllowed;
+//Boolean isAttachmentAllowed;
 
 @interface advancedSwipeView() <UIDynamicAnimatorDelegate>
+/*
 @property (strong, nonatomic) CircularUIView *circle;
 @property (strong, nonatomic) UIDynamicAnimator *animator;
 @property (strong, nonatomic) UIAttachmentBehavior *attachmentBehaviour;
 //@property (strong, nonatomic) UICollisionBehavior *collisionBehaviour;
 //@property (strong, nonatomic) UIGravityBehavior *behaviour;
 @property (weak, nonatomic) id<AdvancedSwipeViewDelegate> delegate;
+ */
 @end
 
 @implementation advancedSwipeView
@@ -31,7 +34,7 @@ Boolean isAttachmentAllowed;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    isAttachmentAllowed = true;
+    self.isAttachmentAllowed = true;
     //[self.behaviour addItem:self.circle];
 }
 
@@ -68,8 +71,10 @@ Boolean isAttachmentAllowed;
 - (CircularUIView *)circle {
     if(!_circle) {
         CGFloat circleDiameter = self.bounds.size.height - SWIPE_VIEW_DIFFERENCE_BETWEEN_RECT_AND_CIRCLE;
+        //CGFloat circleDiameter = 250.0;
         _circle = [[CircularUIView alloc] initWithFrame:CGRectMake((self.bounds.size.width - circleDiameter)/2.0, (self.bounds.size.height- circleDiameter)/2.0, circleDiameter, circleDiameter)];
         [self addSubview:_circle];
+        NSLog(@"%f",circleDiameter);
     }
     
     return _circle;
@@ -77,7 +82,7 @@ Boolean isAttachmentAllowed;
 
 #pragma mark - Helper Functions
 
-- (CGFloat)cornerScaleFactor {return self.bounds.size.height/SWIPE_VIEW_CORNER_FONT_STANDARD_HEIGHT;}
+- (CGFloat)cornerScaleFactor {return 250/SWIPE_VIEW_CORNER_FONT_STANDARD_HEIGHT;}
 - (CGFloat)cornerRadius {return SWIPE_VIEW_ROUNDED_RECT_CORNER_RADIUS * [self cornerScaleFactor];}
 
 - (CGFloat)cornerOffSet {return [self cornerRadius]/3.0;}
@@ -101,17 +106,17 @@ Boolean isAttachmentAllowed;
 }
 
 //- (void)updateCenter:(CGPoint)centerPoint {
-//    self.circle = [UIBezierPath bezierPathWithArcCenter:centerPoint radius:self.bounds.size.height/2.0 startAngle:0 endAngle:(22*3.14)/7 clockwise:YES];
+//    self.circle = [UIBezierPath bezierPathWithArcCenter:centerPoint radius:250.0/2.0 startAngle:0 endAngle:(22*3.14)/7 clockwise:YES];
 //    [self setNeedsDisplay];
 //}
 
 #pragma mark - Gesture Recognizers
-
+/*
 - (void)pan:(UIPanGestureRecognizer *)gesture {
     if(isAttachmentAllowed) {
-        CGFloat circleDiameter = self.bounds.size.height - SWIPE_VIEW_DIFFERENCE_BETWEEN_RECT_AND_CIRCLE;
+        CGFloat circleDiameter = 250.0 - SWIPE_VIEW_DIFFERENCE_BETWEEN_RECT_AND_CIRCLE;
         CGPoint gesturePoint = [gesture locationInView:self];
-        gesturePoint.y = self.bounds.size.height/2.0;
+        gesturePoint.y = 250.0/2.0;
 
         if((gesture.state == UIGestureRecognizerStateBegan) || gesture.state == UIGestureRecognizerStateChanged || gesture.state == UIGestureRecognizerStateEnded) {
 
@@ -146,8 +151,8 @@ Boolean isAttachmentAllowed;
                     // we will animate the circle back to the center
                     //NSLog(@"%f %f", self.attachmentBehaviour.anchorPoint.x, self.attachmentBehaviour.anchorPoint.y);
                     [UIView animateWithDuration:1.0 animations:^() {
-    //                        self.attachmentBehaviour.anchorPoint = CGPointMake(self.bounds.size.width/2.0, self.bounds.size.height/2.0);
-                        self.circle.center = CGPointMake(self.bounds.size.width/2.0, self.bounds.size.height/2.0);
+    //                        self.attachmentBehaviour.anchorPoint = CGPointMake(self.bounds.size.width/2.0, 250.0/2.0);
+                        self.circle.center = CGPointMake(self.bounds.size.width/2.0, 250.0/2.0);
                         [self.animator removeBehavior:self.attachmentBehaviour];
                         self.attachmentBehaviour = nil;
                         isAttachmentAllowed = false;
@@ -163,5 +168,6 @@ Boolean isAttachmentAllowed;
         }
     }
 }
+*/
 
 @end
